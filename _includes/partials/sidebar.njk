@@ -1,0 +1,57 @@
+<div class="col-md-3 p-3">
+{% if wordpress.config.widget_show_lastest %}
+<h3 class="col-md-12 mt-5 mb-5 fw-semibold">{{wordpress.config.widget_1_title}}</h3>
+{% for post in wordpress.posts | limit(3) %}
+<article class="row mt-3 hover-effect-container">
+<div class="col-md-4 col-3">
+<a href="/post/{{post.slug}}" title="{{post.title}}">
+<img class="img-fluid" alt="{{post.title}}" 
+width="100%" height="100%"
+src="{{post.image or wordpress.config.image}}"/></a>
+</div>
+<div class="col-md-8 col-9 text-list-article">
+<a href="/post/{{post.slug}}" class="none d">
+<p class="fw-semibold">{{post.title}}</p>
+<div class="small mto">{{post.excerpt | safe}}</div>
+</a>
+</div>
+</article>{% endfor %}
+{% endif %}
+
+{% if wordpress.config.widget_show_widget_2 %}
+<h3 class="col-md-12 mt-5 mb-3 fw-semibold">{{wordpress.config.widget_2_title}}</h3>
+<article class="row mt-3">
+<div class="col-md-12 col-3">
+<a href="{{wordpress.config.widget_2_url}}" class="none d">
+<img class="img-thumbnail border-0" alt="{{wordpress.config.widget_2_alt}}" width="100%" height="100%"
+src="{{wordpress.config.widget_2_image}}"/>
+<p>{{wordpress.config.widget_2_text}}</p>
+</a>
+</div>
+</article>
+{% endif %}
+
+{% if wordpress.config.widget_show_authors %}
+<h3 class="col-md-12 mt-5 mb-5 fw-semibold">{{wordpress.config.widget_3_title}}</h3>
+{% set sortedAuthors = collections.authors | sortAlphabetically('name') | limit(3) %}
+{% for author in sortedAuthors %}
+{% set authorUrl = "/author/" + author.slug + "/" %}
+<article class="row mt-3 hover-effect-container">
+<div class="col-md-4 col-3">
+<a href="{{ authorUrl }}">
+{% if author.profile_picture %}<a href="{{ authorUrl }}" title="{{author.name}}">
+<img width="100%" height="100%" class="'img-fluid rounded"
+alt="{{author.name}}" src="{{author.profile_picture}}"/></a>{% endif %}
+</a>
+</div>
+<div class="col-md-8 col-9 text-list-article">
+<a href="{{ authorUrl }}" class="none d">
+<p class="fw-semibold">
+{{ author.name }}<br/>
+<span class="small">{{author.description}}</span>
+</p></a>
+</div>
+</article>{% endfor %}
+{% endif %}
+
+</div>
