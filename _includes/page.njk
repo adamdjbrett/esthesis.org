@@ -1,0 +1,20 @@
+---
+layout: base.njk
+---
+<header class="container-fluid border-bottom">
+<div class="container col-md-10 mx-auto p-3 p-md-5 text-center">
+<h1 class="text-uppercase text-hero-post fw-bold"><a href="{{page.url}}" class="none">
+{{title}}
+</a></h1>
+</div>
+</header>
+<section class="container-fluid bg-light">
+<div class="col-md-8 mx-auto p-3">
+<heading-anchor>
+{% if metadata.widget.toc_show %}
+<div class="card p-3">{{content|toc|safe}}</div>
+{% endif %}
+{{ content | safe }}
+</heading-anchor>
+</div>
+</section>

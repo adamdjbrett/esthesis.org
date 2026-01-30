@@ -1,0 +1,43 @@
+---
+layout: base.njk
+---
+{% include "partials/hero.njk" %}
+{% include "partials/nav.njk" %}
+<section class="container-fluid">
+<div class="col-md-9 mx-auto">
+<div class="row mt-5">
+<div class="col-md-9 p-3 p-md-5 mt-3">
+<div class="row justify-content-center">
+{% for post in wordpress.posts | limit(12) %}
+<article class="col-md-4 p-3">
+<div class=" img-post-list">
+<a href="/post/{{ post.slug }}/" title="{{post.title}}">
+<img class="img-fluid mb-5 post-list-image"  width="100%" height="100%" 
+alt="{{post.title}}"
+src="{{post.featuredImage or wordpress.config.image }}"
+/></a>
+<a href="/post/{{ post.slug }}/" class="none d">
+<p class="fw-semibold">{{ post.category_names[0] | default('Kategori') }}</p>
+<h3>{{post.title}}</h3>
+{% if post.excerpt %}<div class="post-list-text">{{post.excerpt|safe}}</div>{% endif %}
+</a>
+</div>
+<p class="mt-3">
+<img class="img-profile rounded-circle me-2" 
+alt="{{post.author.name}}"
+src="{{post.author.avatar_urls or wordpress.config.image}}"
+/>
+By <a href="/author/{{ post.author_name | slugify }}" class="none d">{{ post.author_name }}</a>
+</p>
+</article>
+{% endfor %}
+<p class="text-center col-12 p-3">
+<a href="/blog/" class="btn btn-light col-12 col-md-4 btn-lg">Explore All Article</a>
+</p>
+</div>
+</div>
+{% include "partials/sidebar.njk" %}
+</div>
+</div>
+</section>
+{% include "partials/subscribe.njk" %}
