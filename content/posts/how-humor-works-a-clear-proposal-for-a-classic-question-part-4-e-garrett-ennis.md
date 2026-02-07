@@ -1,7 +1,7 @@
 ---
 title: "How Humor Works – A Clear Proposal For A Classic Question, Part 4 (E. Garrett Ennis)"
 date: 2021-01-27T23:17:37+00:00
-author: editors
+author: "E. Garrett Ennis"
 permalink: /how-humor-works-a-clear-proposal-for-a-classic-question-part-4-e-garrett-ennis/
 image: /images/wp-content/uploads/2021/01/1600px-Laughter_Time_256952705-800x500.jpg
 description: "The following is the fourth of a four-part series. The first can be found here, the second here, the third here. Sayings Another unique property of The"

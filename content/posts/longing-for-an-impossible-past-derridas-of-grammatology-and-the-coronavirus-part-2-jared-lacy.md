@@ -12,9 +12,6 @@ tags:
   - "barbarism"
   - "aesthetics"
 ---
-
----
-
 *The following is the second of a two-part series. The first can be found [here.](/longing-for-an-impossible-past-derridas-of-grammatology-and-the-coronavirus-part-1-jared-lacy/)*Furthermore there is an element of nostalgia implicit in this desire. Like the armed protestors who stormed city capital buildings across the United States, there is a sense among certain students and faculty, that in the age of Coronavirus and social distancing, we have lost something like a *parousia*, an unmediated full presence, that had obtained at some point in therecent past. There is a general wish, [as Derrida writes](https://www.google.com/books/edition/Of_Grammatology/iagJAgAAQBAJ?hl=en&gbpv=1&dq=of+grammatology&printsec=frontcover), “to go back *from the supplement to the source.*”(334)
 
 This is described in terms of birth and rebirth or awakening and re-awakening: “birth is the birth (of) presence. Before it there is no presence; and from the moment that presence, holding or announcing itself to itself, fissures its plenitude and starts the chain of history, death’s work has begun.”(33)

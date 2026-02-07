@@ -1,8 +1,5 @@
 _site/
 node_modules/
-scripts/ 
 .DS_Store
 *.log
 .env
-*.sh
-_data/logs/

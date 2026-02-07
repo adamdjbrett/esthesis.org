@@ -14,9 +14,6 @@ tags:
   - "lynn-ta"
   - "marla-singer"
 ---
-
----
-
 *The following is the second installment of a three-part series.  The first can be found [here](/something-to-do-with-a-girl-named-marla-eros-and-gender-in-finchers-fight-club-part-1-vernon-cisney/).*This interaction prompts the narrator’s first visit to a support group for men with testicular cancer, most of whom had lost their testicles.  Here too, we learn a great deal more about the nature of the narrator’s struggle, through the lenses of both himself and of Bob. When the group leader suggests that the men break into pairs and “really open up” to each other, the passive narrator sits alone as the rest of the men, one by one, arise and partner up, until only the narrator and Bob remain. Still, the narrator awkwardly sits, until Bob approaches him and extends a hand, which the narrator accepts.
 
 At first, Bob lays his head upon the narrator’s shoulder, crying as he opens up about his excessive steroid use that, we are led to believe, was the cause of his testicular cancer. Following his emotional revelation, the narrator buries his face into Bob’s chest, and begins sobbing uncontrollably.

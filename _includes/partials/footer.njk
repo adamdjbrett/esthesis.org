@@ -4,10 +4,10 @@
             <h3 class="fw-bold text-footer-title mb-3">
                 <a href="{{ metadata.url }}" class="none">
                     <img class="logo me-3 rounded-3" 
-                         alt="{{ metadata.footer.title }}"
+                         alt="{{ metadata.title }}"
                          width="80px" height="80px" 
                          src="{{ metadata.footer.logo }}"/>
-                    {{ metadata.footer.title }}
+                    {{ metadata.title }}
                 </a>
             </h3>
             <p class="small">{{ metadata.footer.description }}</p>
@@ -32,7 +32,7 @@
 
     <div class="row p-3 mt-3 border-bottom">
         <p class="col-md-8 small">
-            <a class="none" href="{{ metadata.url }}">{{ metadata.footer.copyrights }}</a>
+            <a class="none" href="{{ metadata.url }}">&copy; {{ "" | year }} {{ metadata.footer.copyrights }}</a>
         </p>
         <div class="col-md-4 text-end">
             {% for item in metadata.footer.social %}

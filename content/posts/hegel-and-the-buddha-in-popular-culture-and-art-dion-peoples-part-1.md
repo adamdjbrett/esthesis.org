@@ -1,7 +1,7 @@
 ---
 title: "Hegel And The Buddha in Popular Culture and Art, Part 1 (Dion Peoples)"
 date: 2017-06-13T01:35:13+00:00
-author: editors
+author: "Dion Peoples"
 permalink: /hegel-and-the-buddha-in-popular-culture-and-art-dion-peoples-part-1/
 image: /images/wp-content/uploads/2017/06/27470aded22f2ade51e9b0295cb6e375.jpg
 description: "The following is the first of a two-part series. The second installment can be found here. In the world today all culture, all literature and art belong"

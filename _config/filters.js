@@ -84,6 +84,7 @@ export default function(eleventyConfig) {
     });
 
     // --- 5. UTILS ---
+    eleventyConfig.addFilter("year", () => DateTime.now().toFormat("yyyy"));
     eleventyConfig.addFilter("min", (...numbers) => Math.min(...numbers));
     eleventyConfig.addFilter("getKeys", target => Object.keys(target || {}));
 
@@ -97,8 +98,25 @@ export default function(eleventyConfig) {
         return posts.filter(post => post.data.tags?.includes(tag));
     });
 
+    eleventyConfig.addFilter("parseAuthors", (authorString, collectionsAll) => {
+        if (!authorString || !collectionsAll) return [];
+        const authors = String(authorString).split(';').map(a => a.trim()).filter(Boolean);
+        return authors.map(auth => {
+            const contributor = collectionsAll.find(item => item.fileSlug === auth);
+            return {
+                slug: auth,
+                name: contributor?.data?.title || auth,
+                image: contributor?.data?.image || null
+            };
+        });
+    });
+
     eleventyConfig.addFilter("filterByAuthor", (posts, author) => {
-        return posts.filter(post => post.data.author === author || post.data.authors === author);
+        return posts.filter(post => {
+            const authorField = post.data.author || post.data.authors || '';
+            const authors = String(authorField).split(';').map(a => a.trim());
+            return authors.includes(author);
+        });
     });
 
     // --- 7. BREADCRUMBS ---

@@ -1,7 +1,7 @@
 ---
 title: "A Cathartic Manifesto: Corporeality in James Joyce, Part 2 (Tim Royan)"
 date: 2018-11-09T22:34:10+00:00
-author: editors
+author: Tim Royan
 permalink: /a-cathartic-manifesto-corporeality-in-james-joyce-part-2-tim-royan/
 image: /images/wp-content/uploads/2018/11/riverscape-800x500.jpg
 description: "The following is the second part in a two-part installment. The first part can be found here. The fact that Bloom implements a diseased prostitute’s body,"

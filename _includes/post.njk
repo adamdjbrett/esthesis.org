@@ -43,8 +43,11 @@ layout: base.njk
                         <a href="/tags/{{ tag | slugify }}/" class="badge text-bg-light border text-decoration-none me-1">{{ tag | displayName }}</a>
                     {% endif %}{% endfor %}
                 </p>
-                {% if author %}
-                    <p>By <span class="fw-bold"><a href="/contributor/{{ author | slugify }}/" class="text-decoration-none text-dark">{{ author }}</a></span></p>
+                {% set authors = (author) | parseAuthors(collections.all) %}
+                {% if authors.length > 0 %}
+                    <p>By {% for auth in authors %}
+                        <span class="fw-bold"><a href="/contributor/{{ auth.slug }}/" class="text-decoration-none text-dark">{{ auth.name }}</a></span>{% if not loop.last %}; {% endif %}
+                    {% endfor %}</p>
                 {% endif %}
             </div>
 

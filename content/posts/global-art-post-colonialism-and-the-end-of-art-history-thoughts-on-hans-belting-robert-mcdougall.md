@@ -1,7 +1,7 @@
 ---
 title: "Global Art, Post-Colonialism And The End of Art History (Robert McDougall), Part 1"
 date: 2020-05-02T03:46:12+00:00
-author: editors
+author: "Robert McDougall"
 permalink: /global-art-post-colonialism-and-the-end-of-art-history-thoughts-on-hans-belting-robert-mcdougall/
 image: /images/wp-content/uploads/2020/05/2017-06-07_Der_Parthenon_der_Bücher_by_Olaf_Kosinsky-5-800x500.jpg
 description: "The following is the first of a two-part series. In Contemporary Art as Global Art: A Critical Estimate, Hans Belting sets out to explain how the concept"

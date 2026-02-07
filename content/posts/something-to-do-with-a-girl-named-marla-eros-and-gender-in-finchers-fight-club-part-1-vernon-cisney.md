@@ -21,9 +21,6 @@ tags:
   - "taosim"
   - "ying-and-yang"
 ---
-
----
-
 *The following is the first installment of a three-part series.*> A way that can be walked is not The Way
 
 A name that can be named is not The Name

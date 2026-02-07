@@ -1,7 +1,7 @@
 ---
 title: "Experiencing The Experience Of Light – Concerning Space Art (Leonardo de Vivo)"
 date: 2017-10-10T19:45:32+00:00
-author: editors
+author: "Leonardo de Vivo"
 permalink: /experiencing-the-experience-of-light-concerning-space-art/
 image: /images/wp-content/uploads/2017/10/Turrell-Sky-Spaces.jpg
 description: "“If the doors of perception were cleansed everything would appear to man as it is, Infinite.” – William Blake Since the first visual artistic expressions,"

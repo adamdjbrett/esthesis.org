@@ -1,0 +1,73 @@
+---
+layout: page.njk
+title: Search
+description: "Search articles and content on Esthesis"
+permalink: /search/
+---
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h1 class="display-5 fw-bold mb-3">Search</h1>
+            <p class="lead text-muted mb-5">Find articles, contributors, and content across Esthesis</p>
+
+            <!-- Pagefind Search UI -->
+            <link href="https://cdn.jsdelivr.net/npm/pagefind/ui/styles.min.css" rel="stylesheet">
+            <script src="https://cdn.jsdelivr.net/npm/pagefind/ui/ui.umd.js"></script>
+
+            <div id="search" class="mb-5"></div>
+
+            <script>
+                new PagefindUI({
+                    element: "#search",
+                    baseUrl: "/",
+                    showImages: false,
+                    showSubResults: true
+                });
+            </script>
+        </div>
+    </div>
+</div>
+
+<style>
+/* Customize Pagefind UI styling to match theme */
+:root {
+    --pf-background-color: #ffffff;
+    --pf-border-color: #e0e0e0;
+    --pf-text-color: #333333;
+    --pf-link-color: #000000;
+}
+
+.pagefind-ui__search-input {
+    border: 2px solid #000 !important;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+}
+
+.pagefind-ui__search-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.pagefind-ui__result-link {
+    color: #000;
+    font-weight: 500;
+}
+
+.pagefind-ui__result-link:hover {
+    color: #666;
+}
+
+.pagefind-ui__button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+}
+
+.pagefind-ui__button:hover {
+    background-color: #333;
+}
+</style>
