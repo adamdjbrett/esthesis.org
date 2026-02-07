@@ -101,6 +101,28 @@ eleventyConfig.addCollection("contributor", function(collectionApi) {
     })).filter(a => a.posts.length > 0);
   });
 
+  // Tags collection for /tags/* pages
+  eleventyConfig.addCollection("tags", (collectionApi) => {
+    const tags = new Set();
+    collectionApi.getAll().forEach(item => {
+      if (item.data.tags && Array.isArray(item.data.tags)) {
+        item.data.tags.forEach(tag => tags.add(tag));
+      }
+    });
+    return Array.from(tags).sort();
+  });
+
+  // Categories collection for /categories/* pages
+  eleventyConfig.addCollection("categories", (collectionApi) => {
+    const categories = new Set();
+    collectionApi.getAll().forEach(item => {
+      if (item.data.categories && Array.isArray(item.data.categories)) {
+        item.data.categories.forEach(cat => categories.add(cat));
+      }
+    });
+    return Array.from(categories).sort();
+  });
+
   // --- RETURN OBJECT FIX ---
   return {
     dir: {

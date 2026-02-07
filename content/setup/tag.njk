@@ -8,7 +8,7 @@ pagination:
 permalink: "/tag/{{ tag }}/"
 ---
 
-<h1>Tag: {{ tag | displayName }}</h1>
+<h1>Tag: {{ tag | formatCategoryTag }}</h1>
 
 <ul>
   {% for post in collections.posts | filterByTagSafe(tag) | reverse %}

@@ -18,7 +18,7 @@ tags:
   - "w-b-yeats"
 ---
 
-*The following is the first of a two-part series.*James Joyce, throughout his literary career, repeatedly implements descriptions of the human body and its functions as a thematic device through which to explore other, more grandiose literary topics. In the process, he utilizes an almost routine breaking of taboos that are often mundane to explore these subjects.
+*The following is the first of a two-part series.* James Joyce, throughout his literary career, repeatedly implements descriptions of the human body and its functions as a thematic device through which to explore other, more grandiose literary topics. In the process, he utilizes an almost routine breaking of taboos that are often mundane to explore these subjects.
 
 This is an essential characteristic of Joyce’s project: rather than merely producing an affect of shock in the reader or an aura of rebelliousness around his writing, Joyce’s contemplations on the human body, as well as his bold, repeated flirtations with what many of his contemporaries would – and, quite literally did – charge as obscenity, are techniques integral to the advancement of a new unique and forward-looking literary movement, namely modernism.
 

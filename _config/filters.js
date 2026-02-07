@@ -73,6 +73,15 @@ export default function(eleventyConfig) {
             .join(" ");
     });
 
+    // Display categories and tags with capitalization after hyphens
+    eleventyConfig.addFilter("formatCategoryTag", (value) => {
+        if (!value) return "";
+        return value.toString()
+            .split('-')
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+            .join('-');
+    });
+
     eleventyConfig.addFilter("baseUrl", (url) => {
         if (!url || url === "/") return "http://localhost:8080";
         return url.endsWith("/") ? url.slice(0, -1) : url;
@@ -96,6 +105,14 @@ export default function(eleventyConfig) {
     eleventyConfig.addFilter("filterByTag", (posts, tag) => {
         if (!tag) return posts;
         return posts.filter(post => post.data.tags?.includes(tag));
+    });
+
+    eleventyConfig.addFilter("filterByTagSafe", (posts, tag) => {
+        if (!tag) return posts;
+        return posts.filter(post => {
+            const tags = post.data.tags || [];
+            return Array.isArray(tags) ? tags.includes(tag) : tags === tag;
+        });
     });
 
     eleventyConfig.addFilter("parseAuthors", (authorString, collectionsAll) => {
@@ -146,18 +163,6 @@ export default function(eleventyConfig) {
             return author === nameLower || author === shortName || 
                     title.includes(nameLower) || (lastName && title.includes(lastName));
         });
-    });
-
-    eleventyConfig.addCollection("categories", function(collectionApi) {
-        let categories = new Set();
-        collectionApi.getAll().forEach(item => {
-            if (item.data.categories) {
-                let tags = item.data.categories;
-                if (typeof tags === "string") tags = [tags];
-                tags.forEach(tag => categories.add(tag));
-            }
-        });
-        return Array.from(categories).sort();
     });
 
     eleventyConfig.addFilter("initials", (name) => {

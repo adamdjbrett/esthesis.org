@@ -15,11 +15,11 @@ permalink: "/category/{{ category | slugify }}/"
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb mb-2">
                         <li class="breadcrumb-item"><a href="/categories/" class="text-decoration-none">Categories</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">{{ category | displayName }}</li>
+                        <li class="breadcrumb-item active" aria-current="page">{{ category | formatCategoryTag }}</li>
                     </ol>
                 </nav>
                 <h1 class="display-4 fw-bold text-dark">
-                    <span class="text-muted fw-light">Category:</span> {{ category | displayName }}
+                    <span class="text-muted fw-light">Category:</span> {{ category | formatCategoryTag }}
                 </h1>
             </header>
 
