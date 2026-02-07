@@ -1,7 +1,7 @@
 ---
 title: "The Socially Engaged Art Of Francis Alÿs (Hania Afifi)"
 date: 2017-05-23T00:50:16+00:00
-author: editors
+author: "Hania Afifi"
 permalink: /the-socially-engaged-art-of-francis-alys-hania-afifi/
 image: /images/wp-content/uploads/2017/05/9b46f88d50e64b78fcc3ed9c8d90eefd-1.jpg
 description: "At 09:00 AM on Sunday June 23, 2002, the 12-person Peruvian brass band, Banda de Santa Cecilia, began playing solemn subdued rhythms in front of the Museum"

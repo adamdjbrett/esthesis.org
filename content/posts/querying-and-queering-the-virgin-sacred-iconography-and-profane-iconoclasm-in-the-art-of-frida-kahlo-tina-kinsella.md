@@ -1,7 +1,7 @@
 ---
 title: "Querying And Queering The Virgin – Sacred Iconography And Profane Iconoclasm In The Art Of Frida Kahlo (Tina Kinsella)"
 date: 2017-01-15T19:33:11+00:00
-author: editors
+author: "Tina Kinsella"
 permalink: /querying-and-queering-the-virgin-sacred-iconography-and-profane-iconoclasm-in-the-art-of-frida-kahlo-tina-kinsella/
 image: /images/wp-content/uploads/2017/01/Frida-Kahlo.jpg
 description: "Frida Kahlo A contemporary icon of those on the periphery and for those who are dispossessed, Frida Kahlo’s paintings draw on her mestizaje inheritance and"

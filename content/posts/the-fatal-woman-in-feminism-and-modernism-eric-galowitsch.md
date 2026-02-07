@@ -1,7 +1,7 @@
 ---
 title: "The “Fatal Woman” In Feminism And Modernism (Eric Galowitsch)"
 date: 2017-05-09T03:14:53+00:00
-author: editors
+author: "Eric Galowitsch"
 permalink: /the-fatal-woman-in-feminism-and-modernism-eric-galowitsch/
 image: /images/wp-content/uploads/2017/05/the-sin.jpg
 description: "In French, femme fatale means a “fatal” or “disastrous” woman. She is often one who attempts to attract or snare men. The definition of femme fatale from"

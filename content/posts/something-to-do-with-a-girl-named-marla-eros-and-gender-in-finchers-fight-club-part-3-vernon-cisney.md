@@ -1,7 +1,7 @@
 ---
 title: "Something To Do With A Girl Named Marla – Eros And Gender In Fincher’s “Fight Club”, Part 3 (Vernon Cisney)"
 date: 2019-08-20T19:26:36+00:00
-author: editors
+author: "Vernon Cisney"
 permalink: /something-to-do-with-a-girl-named-marla-eros-and-gender-in-finchers-fight-club-part-3-vernon-cisney/
 image: /images/wp-content/uploads/2019/08/fighting-800x500.jpg
 description: "The following is the third installment of a three-part series. The first can be found here. The second is here. Something to Do With a Girl Named Marla"
