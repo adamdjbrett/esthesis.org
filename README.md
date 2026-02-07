@@ -9,7 +9,7 @@
 
 A New version of Esthesis Website build with 11ty JAMSTACK feat Sveltia CMS
 
-A Project develop by [Adam Dj Brett](https://adamdjbrett.com)
+A Project develop by [Adam DJ Brett](https://adamdjbrett.com)
 
 Need help or have project ?? Contact Me
 + https://adamdjbrett.com

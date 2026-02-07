@@ -11,19 +11,7 @@ permalink: /tags/
     <p class="lead text-muted">Browse all posts organized by tag.</p>
   </header>
 
-  {% set allTags = [] %}
-  {% for post in collections.posts %}
-    {% if post.data.tags %}
-      {% for tag in post.data.tags %}
-        {% set tagTrimmed = tag | trim %}
-        {% if tagTrimmed and tagTrimmed not in ['posts', 'all'] and tagTrimmed not in allTags %}
-          {% set allTags = allTags.concat([tagTrimmed]) %}
-        {% endif %}
-      {% endfor %}
-    {% endif %}
-  {% endfor %}
-
-  {% set allTagsSorted = allTags | sort %}
+  {% set allTagsSorted = (collections.tags or []) | sort %}
 
   <ul class="list-unstyled row" data-pagefind-ignore>
     {% for tag in allTagsSorted %}

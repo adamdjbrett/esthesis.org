@@ -1,12 +1,12 @@
 ---
+layout: null
 permalink: /sitemap.xml
 eleventyExcludeFromCollections: true
 ---
-
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
   {% set baseUrl = metadata.url | baseUrl %}
-  <!-- Home Page -->
+
   <url>
     <loc>{{ "/" | absUrl(baseUrl) }}</loc>
     <lastmod>{{ buildinfo.now | isoDate }}</lastmod>
@@ -14,7 +14,7 @@ eleventyExcludeFromCollections: true
     <priority>1.0</priority>
   </url>
 
-  <!-- Blog Posts -->
+
   {%- for post in collections.posts %}
   <url>
     <loc>{{ post.url | absUrl(baseUrl) }}</loc>
@@ -24,7 +24,7 @@ eleventyExcludeFromCollections: true
   </url>
   {%- endfor %}
 
-  <!-- Regular Pages (About, Archive, Blog, Search, etc.) -->
+
   {%- for page in collections.all %}
   {%- if page.url
         and not page.data.eleventyExcludeFromCollections
@@ -40,7 +40,7 @@ eleventyExcludeFromCollections: true
   {%- endif %}
   {%- endfor %}
 
-  <!-- Sitemaps -->
+
   {%- for sm in collections.sitemaps or [] %}
   <url>
     <loc>{{ sm.url | absUrl(baseUrl) }}</loc>
@@ -50,7 +50,7 @@ eleventyExcludeFromCollections: true
   </url>
   {%- endfor %}
 
-  <!-- Feed URLs (include everything under /feed/) -->
+
   {%- for item in collections.all %}
   {%- if item.url and item.url.indexOf("/feed/") == 0 %}
   <url>
@@ -62,7 +62,7 @@ eleventyExcludeFromCollections: true
   {%- endif %}
   {%- endfor %}
 
-  <!-- Author Feeds -->
+ 
   {%- for author in collections.authors %}
   <url>
     <loc>{{ ("/feed/author-" + (author | slugify) + ".xml") | absUrl(baseUrl) }}</loc>

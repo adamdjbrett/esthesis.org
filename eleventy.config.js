@@ -104,9 +104,14 @@ eleventyConfig.addCollection("contributor", function(collectionApi) {
   // Tags collection for /tags/* pages
   eleventyConfig.addCollection("tags", (collectionApi) => {
     const tags = new Set();
-    collectionApi.getAll().forEach(item => {
+    getPosts(collectionApi).forEach(item => {
       if (item.data.tags && Array.isArray(item.data.tags)) {
-        item.data.tags.forEach(tag => tags.add(tag));
+        item.data.tags.forEach(tag => {
+          const t = String(tag || "").trim();
+          if (!t) return;
+          if (t === "posts" || t === "all") return;
+          tags.add(t);
+        });
       }
     });
     return Array.from(tags).sort();
@@ -115,9 +120,13 @@ eleventyConfig.addCollection("contributor", function(collectionApi) {
   // Categories collection for /categories/* pages
   eleventyConfig.addCollection("categories", (collectionApi) => {
     const categories = new Set();
-    collectionApi.getAll().forEach(item => {
+    getPosts(collectionApi).forEach(item => {
       if (item.data.categories && Array.isArray(item.data.categories)) {
-        item.data.categories.forEach(cat => categories.add(cat));
+        item.data.categories.forEach(cat => {
+          const c = String(cat || "").trim();
+          if (!c) return;
+          categories.add(c);
+        });
       }
     });
     return Array.from(categories).sort();

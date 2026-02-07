@@ -1,6 +1,23 @@
 import { DateTime } from "luxon";
 import slugify from "slugify";
 
+const POSTS_MEMO = new WeakMap();
+
+function getPostsMemo(posts) {
+    if (!Array.isArray(posts)) return null;
+    let memo = POSTS_MEMO.get(posts);
+    if (!memo) {
+        memo = {
+            byCategory: new Map(),
+            byTag: new Map(),
+            byAuthor: new Map(),
+            byContributorName: new Map(),
+        };
+        POSTS_MEMO.set(posts, memo);
+    }
+    return memo;
+}
+
 export default function(eleventyConfig) {
     // --- 1. RELATIONSHIP FILTER ---
     eleventyConfig.addFilter("getContributor", (collection, authorSlug) => {
@@ -108,7 +125,14 @@ export default function(eleventyConfig) {
 
     // --- 6. CONTENT FILTERS (Disesuaikan ke 'authors') ---
     eleventyConfig.addFilter("filterByCategory", (posts, category) => {
-        return posts.filter(post => post.data.categories?.includes(category));
+        if (!Array.isArray(posts)) return [];
+        if (!category) return posts;
+        const memo = getPostsMemo(posts);
+        const key = String(category);
+        if (memo && memo.byCategory.has(key)) return memo.byCategory.get(key);
+        const res = posts.filter(post => post.data.categories?.includes(category));
+        if (memo) memo.byCategory.set(key, res);
+        return res;
     });
 
     eleventyConfig.addFilter("filterByTag", (posts, tag) => {
@@ -117,11 +141,17 @@ export default function(eleventyConfig) {
     });
 
     eleventyConfig.addFilter("filterByTagSafe", (posts, tag) => {
+        if (!Array.isArray(posts)) return [];
         if (!tag) return posts;
-        return posts.filter(post => {
+        const memo = getPostsMemo(posts);
+        const key = String(tag);
+        if (memo && memo.byTag.has(key)) return memo.byTag.get(key);
+        const res = posts.filter(post => {
             const tags = post.data.tags || [];
             return Array.isArray(tags) ? tags.includes(tag) : tags === tag;
         });
+        if (memo) memo.byTag.set(key, res);
+        return res;
     });
 
     eleventyConfig.addFilter("parseAuthors", (authorString, collectionsAll) => {
@@ -162,11 +192,18 @@ export default function(eleventyConfig) {
     });
 
     eleventyConfig.addFilter("filterByAuthor", (posts, author) => {
-        return posts.filter(post => {
+        if (!Array.isArray(posts)) return [];
+        if (!author) return [];
+        const memo = getPostsMemo(posts);
+        const key = String(author);
+        if (memo && memo.byAuthor.has(key)) return memo.byAuthor.get(key);
+        const res = posts.filter(post => {
             const authorField = post.data.author || post.data.authors || '';
             const authors = String(authorField).split(';').map(a => a.trim());
             return authors.includes(author);
         });
+        if (memo) memo.byAuthor.set(key, res);
+        return res;
     });
 
     // --- 7. BREADCRUMBS ---
@@ -184,18 +221,24 @@ export default function(eleventyConfig) {
 
     // --- 8. LEGACY / COMPLEX FILTERS ---
     eleventyConfig.addFilter("postsNamedForContributor", (posts, name) => {
-        if (!posts || !name) return [];
-        const nameLower = name.toLowerCase().replace(/["制]/g, "").replace(/\(.*?\)/g, "");
+        if (!Array.isArray(posts) || !name) return [];
+        const memo = getPostsMemo(posts);
+        const nameLower = String(name).toLowerCase().replace(/["制]/g, "").replace(/\(.*?\)/g, "").trim();
+        if (memo && memo.byContributorName.has(nameLower)) return memo.byContributorName.get(nameLower);
+
         const nameParts = nameLower.split(/\s+/).filter(Boolean);
         const lastName = nameParts[nameParts.length - 1];
         const shortName = nameParts.length > 1 ? `${nameParts[0]} ${lastName}` : nameLower;
 
-        return posts.filter((post) => {
+        const res = posts.filter((post) => {
             const title = (post?.data?.title || "").toLowerCase();
             const author = (post?.data?.author || post?.data?.authors || "").toLowerCase();
-            return author === nameLower || author === shortName || 
+            return author === nameLower || author === shortName ||
                     title.includes(nameLower) || (lastName && title.includes(lastName));
         });
+
+        if (memo) memo.byContributorName.set(nameLower, res);
+        return res;
     });
 
     eleventyConfig.addFilter("initials", (name) => {

@@ -13,11 +13,15 @@ metasocial:
 favicon: /images/esthesis-fav.png
 image: /images/esthesis.png
 wordmark: /images/esthesis.svg
+open_graph:
+  title: "ESTHESIS"
+  description: "Arts | Culture | Ideas"
+  image: /images/esthesis-og.png
 
 # GitHub / repository metadata (used in humans.txt)
 github:
   admins:
-    - "Adam Dj Brett"
+    - "Adam DJ Brett"
 
 # Navbar Configuration
 navbar:
@@ -68,7 +72,7 @@ subs:
 # Footer Configuration
 footer:
   logo: /images/esthesis.svg
-  description: "Providing critical thought and philosophical discourse."
+  description: "Arts | Culture | Ideas"
   text: "Esthesis is partner of the Global Art & Ideas Network (GAIN)"
   copyrights: "Esthesis is a Whitestone Foundation Publication. All rights reserved."
   nav_title: "Quick Links"
