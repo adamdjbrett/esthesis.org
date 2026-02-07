@@ -1,5 +1,8 @@
 ---
-title: "Joy Steinberg"
+name: "Joy Steinberg"
+role: "author"
+description: ""
+image: ""
 ---
 
 Contributor to Esthesis

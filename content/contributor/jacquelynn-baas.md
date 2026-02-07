@@ -1,5 +1,8 @@
 ---
-title: "Jacquelynn Baas"
+name: "Jacquelynn Baas"
+role: "author"
+description: ""
+image: ""
 ---
 
 Contributor to Esthesis

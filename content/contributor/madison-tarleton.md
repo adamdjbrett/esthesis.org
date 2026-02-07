@@ -1,5 +1,8 @@
 ---
-title: "Madison Tarleton"
+name: "Madison Tarleton"
+role: "author"
+description: ""
+image: ""
 ---
 
 Contributor to Esthesis

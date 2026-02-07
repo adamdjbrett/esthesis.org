@@ -1,5 +1,8 @@
 ---
-title: "Karli Brittz"
+name: "Karli Brittz"
+role: "author"
+description: ""
+image: ""
 ---
 
 Contributor to Esthesis

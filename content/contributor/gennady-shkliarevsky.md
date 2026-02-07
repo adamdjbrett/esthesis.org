@@ -1,5 +1,8 @@
 ---
-title: "Gennady Shkliarevsky"
+name: "Gennady Shkliarevsky"
+role: "author"
+description: ""
+image: ""
 ---
 
 Contributor to Esthesis

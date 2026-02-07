@@ -1,5 +1,8 @@
 ---
-title: "Sergio C. Figueiredo"
+name: "Sergio C. Figueiredo"
+role: "author"
+description: ""
+image: ""
 ---
 
 Contributor to Esthesis

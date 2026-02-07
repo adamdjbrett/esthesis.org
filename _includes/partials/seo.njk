@@ -32,7 +32,8 @@
 <meta content="{{ metadata.metasocial.twitter }}" name="twitter:site" />
 <meta property="og:type" content="website" />
 <meta content="index, follow" name="robots">
-<link rel="canonical" href="{{ metadata.url }}{{ page.url }}" />
+{% set canonicalHref = canonical_url or (metadata.url + page.url) %}
+<link rel="canonical" href="{{ canonicalHref }}" />
 <link
 	rel="alternate"
 	href="feed/feed.xml"

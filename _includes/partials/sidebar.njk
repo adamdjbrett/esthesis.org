@@ -51,7 +51,7 @@
                     <a href="/contributor/{{ author.fileSlug }}/" class="d-block">
                         <div class="ratio ratio-1x1 mx-auto" style="width: 50px;"> 
                             <img src="{{ author.data.image or metadata.image }}" 
-                                 alt="{{ author.data.title }}" 
+                                 alt="{{ author.data.name or author.data.title }}" 
                                  class="rounded-circle object-fit-cover border shadow-sm"
                                  style="width: 50px; height: 50px;">
                         </div>
@@ -60,10 +60,10 @@
                 <div class="col-md-9 col-9 ps-2">
                     <a href="/contributor/{{ author.fileSlug }}/" class="text-decoration-none d-block">
                         <p class="fw-bold mb-0 text-dark" style="font-size: 0.9rem; line-height: 1.2;">
-                            {{ author.data.title }}
+                            {{ author.data.name or author.data.title }}
                         </p>
                         <span class="small text-muted d-block" style="font-size: 0.7rem;">
-                            {{ author.data.affiliation | default('Contributor') }}
+                            {{ author.data.role or author.data.affiliation or 'Author' }}
                         </span>
                     </a>
                 </div>

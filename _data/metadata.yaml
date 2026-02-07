@@ -1,4 +1,4 @@
-title: "⁂ ESTHESIS ⁂"
+title: "ESTHESIS"
 description: Arts, Culture, and Ideas
 url: http://localhost:8080
 language: en
@@ -12,6 +12,12 @@ metasocial:
 
 favicon: /images/esthesis-fav.png
 image: /images/esthesis.png
+wordmark: /images/esthesis.svg
+
+# GitHub / repository metadata (used in humans.txt)
+github:
+  admins:
+    - "Adam Dj Brett"
 
 # Navbar Configuration
 navbar:

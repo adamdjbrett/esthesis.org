@@ -1,5 +1,8 @@
 ---
-title: "Sandra Jean Ceas"
+name: "Sandra Jean Ceas"
+role: "author"
+description: ""
+image: ""
 ---
 
 Contributor to Esthesis

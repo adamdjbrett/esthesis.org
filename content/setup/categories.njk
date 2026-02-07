@@ -5,8 +5,8 @@ permalink: /categories/
 ---
 <header class="container-fluid border-bottom">
 <div class="container col-md-10 mx-auto p-3 p-md-5 text-center">
-<h1 class="text-uppercase text-hero-post fw-bold"><a href="{{page.url}}" class="none">
-{{title}}
+<h1 class="text-uppercase text-hero-post fw-bold" data-pagefind-meta="title" data-pagefind-weight="5"><a href="{{ page.url }}" class="none">
+{{ title }}
 </a></h1>
 </div>
 </header>
@@ -14,11 +14,11 @@ permalink: /categories/
     <div class="row">
         <div class="col-md-10 mx-auto">
             <header class="mb-5 border-bottom pb-4">
-                <h2 class=fw-bold text-dark">Categories</h2>
+                <h2 class="fw-bold text-dark">Categories</h2>
                 <p class="lead text-muted">Browse all posts organized by category.</p>
             </header>
 
-            <div class="category-wrapper">
+            <div class="category-wrapper" data-pagefind-ignore>
                 {% set categoriesSet = [] %}
                 {% for post in collections.posts %}
                     {% if post.data.categories %}

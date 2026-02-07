@@ -1,5 +1,8 @@
 ---
-title: "Brittany Scantland-Lall"
+name: "Brittany Scantland-Lall"
+role: "author"
+description: ""
+image: ""
 ---
 
 Contributor to Esthesis

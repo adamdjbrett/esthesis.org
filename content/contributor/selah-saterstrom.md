@@ -1,5 +1,8 @@
 ---
-title: "Selah Saterstrom"
+name: "Selah Saterstrom"
+role: "author"
+description: ""
+image: ""
 ---
 
 Contributor to Esthesis

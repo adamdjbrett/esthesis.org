@@ -5,7 +5,7 @@ pagination:
   data: collections.categories
   size: 1
   alias: category
-permalink: "/category/{{ category | slugify }}/"
+permalink: "/categories/{{ category | slugify }}/"
 ---
 
 <section class="container py-5">
@@ -18,12 +18,12 @@ permalink: "/category/{{ category | slugify }}/"
                         <li class="breadcrumb-item active" aria-current="page">{{ category | formatCategoryTag }}</li>
                     </ol>
                 </nav>
-                <h1 class="display-4 fw-bold text-dark">
+                <h1 class="display-4 fw-bold text-dark" data-pagefind-meta="title" data-pagefind-weight="2">
                     <span class="text-muted fw-light">Category:</span> {{ category | formatCategoryTag }}
                 </h1>
             </header>
 
-            <div class="row">
+            <div class="row" data-pagefind-ignore>
                 {% set catPosts = collections.posts | filterByCategory(category) | reverse %}
 
                 {% for post in catPosts %}

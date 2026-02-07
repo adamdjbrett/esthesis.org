@@ -1,5 +1,8 @@
 ---
-title: "Eric Galowitsch"
+name: "Eric Galowitsch"
+role: "author"
+description: ""
+image: ""
 ---
 
 Contributor to Esthesis

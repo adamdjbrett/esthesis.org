@@ -1,5 +1,8 @@
 ---
-title: "Victor Taylor"
+name: "Victor Taylor"
+role: "author"
+description: ""
+image: ""
 ---
 
 Contributor to Esthesis

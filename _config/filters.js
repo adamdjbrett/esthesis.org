@@ -34,6 +34,14 @@ export default function(eleventyConfig) {
         return DateTime.fromJSDate(dateObj, { zone: "utc" }).toISO();
     });
 
+    eleventyConfig.addFilter("dateTimeFull", (dateInput, zone = "utc") => {
+        if (!dateInput) return "";
+        const dt = (typeof dateInput === "string")
+            ? DateTime.fromISO(dateInput, { zone })
+            : DateTime.fromJSDate(dateInput, { zone });
+        return dt.isValid ? dt.toLocaleString(DateTime.DATETIME_FULL) : "";
+    });
+
     // --- 3. ARRAY & COLLECTION FILTERS ---
     eleventyConfig.addFilter("limit", (arr, limit) => {
         return Array.isArray(arr) ? arr.slice(0, limit) : [];
@@ -122,7 +130,7 @@ export default function(eleventyConfig) {
             const contributor = collectionsAll.find(item => item.fileSlug === auth);
             return {
                 slug: auth,
-                name: contributor?.data?.title || auth,
+                name: contributor?.data?.name || contributor?.data?.title || auth,
                 image: contributor?.data?.image || null
             };
         });

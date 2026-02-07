@@ -1,5 +1,8 @@
 ---
-title: "Eric Washington"
+name: "Eric Washington"
+role: "author"
+description: ""
+image: ""
 ---
 
 Contributor to Esthesis

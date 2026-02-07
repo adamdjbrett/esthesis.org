@@ -1,5 +1,8 @@
 ---
-title: "Daniel Y. Harris"
+name: "Daniel Y. Harris"
+role: "author"
+description: ""
+image: ""
 ---
 
 Contributor to Esthesis

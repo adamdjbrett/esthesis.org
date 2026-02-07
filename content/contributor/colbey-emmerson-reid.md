@@ -1,5 +1,8 @@
 ---
-title: "Colbey Emmerson Reid"
+name: "Colbey Emmerson Reid"
+role: "author"
+description: ""
+image: ""
 ---
 
 Contributor to Esthesis
