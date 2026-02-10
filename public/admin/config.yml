@@ -28,7 +28,7 @@ collections:
             name: "navbar"
             widget: "object"
             fields:
-              - { label: "Logo", name: "logo", widget: "image" }
+              - { label: "Title", name: "title", widget: "string" }
               - { label: "Button Text", name: "button", widget: "string" }
               - { label: "Button URL", name: "button_url", widget: "string" }
               - label: "Nav List"
