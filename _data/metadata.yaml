@@ -25,7 +25,6 @@ github:
 
 # Navbar Configuration
 navbar:
-  logo: "/images/esthesis.png"
   title: "ESTHESIS"
   button: "Search"
   button_url: "/search/"
@@ -71,6 +70,7 @@ subs:
 
 # Footer Configuration
 footer:
+  title: "ESTHESIS"
   logo: /images/esthesis.svg
   description: "Arts | Culture | Ideas"
   text: "Esthesis is partner of the Global Art & Ideas Network (GAIN)"

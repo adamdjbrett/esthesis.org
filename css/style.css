@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@font-face {
+    font-family: 'BELLA SOPHIE Regular';
+    src: url('/fonts/bella-sophie.woff2') format('woff2'),
+         url('/fonts/bella-sophie.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 [data-bs-theme="light"] {
   --bs-body-bg: #ffffff;
   --bs-body-color: #212529;
@@ -18,7 +26,29 @@
   background-color: var(--bs-danger) !important;
   color: #fff !important;
 }
-
+h1.text-hero {
+    font-family: "BELLA SOPHIE Regular", sans-serif !important;
+    font-size: 180px !important;
+    line-height: 0.8 !important;
+    letter-spacing: -0.02em;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: center;
+    white-space: nowrap !important;
+    display: block !important;
+    width: 100% !important;
+}
+header.container-fluid, 
+.container {
+    overflow: visible !important;
+}
+@media (max-width: 991px) {
+    h1.text-hero {
+        font-size: 15vw !important;
+        white-space: normal !important;
+        line-height: 0.9 !important;
+    }
+}
 .text-list-article p {
   margin-bottom: 0 !important;
   line-height: 1.2;
@@ -44,15 +74,14 @@ body {
     display: flex;
     flex-direction: column;
 }
-.text-hero {
-    font-size: clamp(1rem, 10vw, 8rem); 
+.text-hero,.text-hero-post  {
+    font-size: clamp(1rem, 10vw, 180px); 
     max-width: 100%;
     display: block;
     overflow-wrap: break-word;
     line-height: 1.1;
 }
-.text-hero-post {font-size: 4vw;}
-text-hero-posts {font-size: 2vw;}
+/*.text-hero-post {font-size: 4vw;} */
 .small {font-size:16px;}
 .smallest {font-size:12px;}
 .text-list-article {
@@ -67,7 +96,17 @@ max-width: 400px;
 	padding-top: 120px;
 	padding-bottom: 120px;
 }
-.text-footer-title {font-size: 3vw;}
+.text-footer-title {
+    font-family: "BELLA SOPHIE Regular", sans-serif !important;
+    font-size: 3vw !important;
+    line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+    .text-footer-title {
+        font-size: 8vw !important;
+    }
+}
 .footer-list {
   list-style-type: none;
 }
@@ -244,4 +283,16 @@ footer a {color: inhehrit;}
 .btn-theme-toggle i {
     font-size: 1.2rem;
     color: inherit !important;
+}
+h1 svg  {
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+    margin: 0 auto;   
+    aspect-ratio: auto; 
+}
+
+.text-hero svg,.text-footer-title svg {
+    max-width: 100%;
+    height: auto;
 }
