@@ -71,7 +71,7 @@
                                 {{ author.data.title }}
                             </p>
                             <span class="small text-body-secondary d-block" style="font-size: 0.7rem;">
-                                {{ author.data.affiliation | default('Contributor') }}
+                                {{ author.data.affiliation or author.data.name or author.data.title }}
                             </span>
                         </a>
                     </div>

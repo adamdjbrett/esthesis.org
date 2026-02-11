@@ -1,11 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 @font-face {
-    font-family: 'BELLA SOPHIE Regular';
-    src: url('/fonts/bella-sophie.woff2') format('woff2'),
-         url('/fonts/bella-sophie.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Bella Sophie";
+  src:
+    local("BELLA SOPHIE Regular"),
+    local("Bella Sophie Regular"),
+    url("/css/bella/BellasophieRegular-AL2wD.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+h1 {
+  font-family: "Bella Sophie", "BELLA SOPHIE Regular", Lato, sans-serif;
+  font-size: 180px;
+  letter-spacing: 0.025em;
+  text-align: center;
 }
 [data-bs-theme="light"] {
   --bs-body-bg: #ffffff;
@@ -27,7 +36,7 @@
   color: #fff !important;
 }
 h1.text-hero {
-    font-family: "BELLA SOPHIE Regular", sans-serif !important;
+    font-family: "Bella Sophie", "BELLA SOPHIE Regular", sans-serif !important;
     font-size: 180px !important;
     line-height: 0.8 !important;
     letter-spacing: -0.02em;
@@ -97,7 +106,7 @@ max-width: 400px;
 	padding-bottom: 120px;
 }
 .text-footer-title {
-    font-family: "BELLA SOPHIE Regular", sans-serif !important;
+    font-family: "Bella Sophie", "BELLA SOPHIE Regular", sans-serif !important;
     font-size: 3vw !important;
     line-height: 1.2;
 }
